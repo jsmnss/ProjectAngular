@@ -1,0 +1,42 @@
+<div class="component-detail-info">
+    <div class="info-section-1">
+        <div class="info-category">
+            <span class="info-description">{{category}}</span>
+            <span class="info-category-description">Categoría: Bienestar</span>
+        </div>
+        <div class="info-object">
+            <span class="info-object-text">Revisar objetivo</span>
+        </div>
+    </div>
+    <div class="info-section-2">
+        <div class="info-content-item">
+            <span class="info-text">En esta fecha:</span>
+            <div class="info-content-description" style="background-color: #A5D7E1">
+                <span class="info-text-description">Diciembre/2022</span>
+            </div>
+        </div>
+        <div class="info-content-item">
+            <span class="info-text">Lograrás:</span>
+            <div class="info-content-description" style="background-color: #FECD72;">
+                <span class="info-text-description">{{(balance | currency: 'COP' : 'symbol-narrow': '0.0')}}</span>
+            </div>
+        </div>
+        <div class="info-content-item">
+            <span class="info-text">
+                <img src="../../../../assets/img/info-product/start.png" height="11px" width="11px" alt="Start"/>
+                Ya cuentas con:</span>
+            <div class="info-content-description" style="background-color: #95DBB7">
+                <span class="info-text-description">$0</span>
+            </div>
+        </div>
+    </div>
+    <div class="info-link-product">
+        <img style="margin-right: 10px;" src="../../../../assets/img/info-product/awesome-check-circle.png" height="15px" width="15px" alt="Check"/>
+        <span class="info-link-product-text" (click)="changeViewItem()">¡Asocia productos para monitorear su progreso!</span>
+        <div style="display: flex; justify-content: right; margin-left: 3px;">
+            <img src="../../../../assets/img/info-product/mountain.png" height="91.36px" width="148.21px" alt="Mountain"/>
+        </div>
+    </div>
+    
+    
+</div>
