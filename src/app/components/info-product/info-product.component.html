@@ -1,0 +1,51 @@
+<div class="background-head-info"></div>
+<img class="background-body-info" src="../../../../assets/img/info-product/img-background.png" alt="background"/>
+<div class="app-breadcrumb">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<div class="info-title">
+    <span class="title-text">¡Tu objetivo ha sido agregado exitosamente!</span>
+    <span class="sub-title-text">¡Te hemos enviado un correo con la notificación!</span>
+</div>
+
+
+<div class="detail-info">
+    <app-detail-info class="app-detail-info" [balance]="balance" [category]="category" (moveToDescription)="moveScrollToCards()"></app-detail-info>
+</div>
+
+<div class="info-adicional-product" id="info-adicional-product">
+    <span class="text-title-adicional">¡Vamos por esos 
+        <span class="text-title-adicional color">{{(balance | currency: 'COP' : 'symbol-narrow': '0.0')}}</span> 
+        <span class="text-title-adicional color">{{category}}</span>!</span>
+    <span class="text-subtitle-adicional">¡A través de tus productos y nuestros rendimientos podremos lograrlo!</span>
+    <div style="display: flex; flex-direction: row; align-items: center;">
+        <strong class="text-subtitle-adicional strong">Asocia tus productos o adquiere uno nuevo.</strong> 
+        <img src="../../../../assets/img/info-product/question.png" height="26px" width="26px" alt="Question"/>
+    </div>
+</div>
+
+<div id="content-cards"
+ style="display: flex; flex-direction: row; align-items: center; overflow-x: hidden;" *ngIf="infoCards.listCard.length > 0">
+    <button class="btn-left" (click)="validateScrollCards(false)"
+    [style]="'background: url(\'../../../assets/img/info-product/'+imgButtonLeft+'\')'"></button>
+    <div class="content-cards" id="content-cards" *ngFor="let card of infoCards.listCard; let i = index">
+        <app-card-product class="card-view start" *ngIf="i === 0"
+        [isLastCard]="false" [cardInfo]="card"></app-card-product>
+        <app-card-product class="card-view" *ngIf="i !== 0"
+        [isLastCard]="false" [cardInfo]="card"></app-card-product>
+        <app-card-product class="card-view end" *ngIf="i === infoCards.listCard.length - 1"
+        [isLastCard]="true" [showRecommendation]="showRecommendation" (getDescriptionRecommendation)="showRecommendation = $event"></app-card-product>
+    </div>
+    <button class="btn-right" (click)="validateScrollCards(true)"
+    [style]="'background: url(\'../../../assets/img/info-product/'+imgButtonRight+'\')'"></button>
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 41px; margin-bottom: 55px;">
+    <button class="btn-object">ASOCIAR A OBJETIVO</button>
+</div>
+
+<div>
+    <app-detail-recommendation *ngIf="showRecommendation"></app-detail-recommendation>
+</div>
+
