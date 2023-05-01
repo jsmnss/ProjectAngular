@@ -1,5 +1,34 @@
 # ProjectAngular
 
+Aplicación que muestra la descripción del producto para "conocer mi sobrino"
+Y adicional muestra diferentes ofertas de productos adicionales que pueden aportar a este.\
+
+
+## Desarrollo
+
+Para esta aplicación se desarrollan dos módulos, el primero es el que contiene la parte del header y 
+el segundo contiene la información del producto y la lista de los productos adicionales.\
+
+Para visualizar los productos se implementa una api y se consume un método GET para obtener la lista 
+de los productos adicionales.\
+
+API: `https://62e152f8fa99731d75d44571.mockapi.io/api/v1/test-front-end-skandia/`
+MÉTODO-GET: `cards`
+No tiene request
+
+
+## Despliegue
+
+Para generar el despliegue de la aplicación se debe correr el siguiente comando
+
+`npm run build:all` \
+
+Este comando genera el compilado de la aplicación en un archivo .js y .css los cuales se comprimen
+con el index.html que se encuentran en la carpeta de elements.\
+
+Se crea el archivo "project.zip" para el despliegue.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
 ## Development server
