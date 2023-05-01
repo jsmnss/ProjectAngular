@@ -1,0 +1,24 @@
+<div class="content-card-product" *ngIf="!isLastCard"
+    [style]="'box-shadow:'+ styleClicked+'; border-bottom: 5px solid '+ cardInfo.colorBorderCard">
+    <div class="content-checkbox">
+        <input class="checkbox" [checked]="cardInfo.isClicked" (click)="changeCheck($event)" type="checkbox">
+    </div>
+    <div class="info-card">
+        <span class="info-card-text" style="margin-bottom: 13px;">{{cardInfo.nameProduct}}</span>
+        <span class="info-card-text num" style="margin-bottom: 20px;">{{cardInfo.numberProduct}}</span>
+        <div style="margin-bottom: 20px; border: 1px solid #C4C7C4; opacity: 1;"></div>
+        <span class="info-card-text">Ya cuentas con:</span>
+        <span class="info-card-text num green-color">{{cardInfo.balanceProduct | currency: 'COP' : 'symbol-narrow': '0.0'}}</span>
+    </div>
+
+    <div class="info-card-description">
+        <img style="margin-top: -100px; position: absolute;" [src]="'../../../../assets/img/info-product/icon-card'+cardInfo.iconCard+'.png'"
+            height="32px" width="32px" alt="icon-card" />
+        <span>{{cardInfo.detaildProduct}}</span>
+    </div>
+</div>
+<div class="content-card-product" *ngIf="isLastCard"
+    [style]="'box-shadow:'+ styleClicked+'; border-bottom: 5px solid '+ colorBorderCard + ';' +
+     'background-image: url(../../../../assets/img/info-product/card-new.png);'">
+    <button class="btn-card" (click)="showDescriptionRecommendation()">EXPLORA AHORA</button>
+</div>

@@ -1,0 +1,146 @@
+.background-head-info {
+    position: absolute;
+    width: 99%;
+    height: 367px;
+    z-index: -1;
+    background-color: #286269;
+}
+
+.background-body-info{
+    
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.app-breadcrumb {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.title-text {
+    text-align: center;
+    font: normal normal bold 25px/30px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.info-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sub-title-text {
+    text-align: center;
+    font: normal normal normal 16px/24px Verdana;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.detail-info{
+    display: flex;
+    justify-content: center;
+}
+
+.app-detail-info {
+    max-width: 536px;
+}
+
+.info-adicional-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.text-title-adicional {
+    text-align: center;
+    font: normal normal bold 25px/30px Montserrat;
+    letter-spacing: 0px;
+    opacity: 1;
+    &.color {
+        color: #FE9200;
+    }
+}
+
+.text-subtitle-adicional {
+    text-align: center;
+    font: normal normal normal 16px/24px Verdana;
+    letter-spacing: 0px;
+    color: #3F3F3F;
+    &.strong {
+        font: normal normal bold 16px/24px Verdana !important;
+        margin-right: 10px;
+    }
+}
+
+.content-cards {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px; 
+}
+
+.btn-left {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    transform: rotateY(180deg);
+    position: absolute;
+    margin-left: 10px;
+}
+
+.btn-right {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: absolute;
+    right: 10px;
+    margin-right: 10px;
+}
+
+.card-view {
+    margin-right: 17px;
+    margin-top: 5px;
+    &.start {
+        margin-left: 65px;
+    }
+    &.end {
+        margin-right: 65px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-view {
+        &.start {
+            margin-left: 15px !important;
+        }
+        &.end {
+            margin-right: 15px !important;
+        }
+    }
+}
+
+.btn-object {
+    background: #E2E2E2 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    opacity: 1;
+    text-align: center;
+    font: normal normal bold 16px/12px Montserrat;
+    letter-spacing: 0px;
+    color: #3F3F3F;
+    border: none;
+    width: 260px;
+    height: 50px;
+}
+
