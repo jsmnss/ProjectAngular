@@ -1,0 +1,30 @@
+<div class="content-recommendation">
+    <div class="content-card-info">
+        <div class="content-info">
+            <div class="content-img" style="background-image: url('../../../../assets/img/info-product/detail-recommendation.png');"></div>
+            <div class="content-text-description">
+                <span class="text-description">¡Fondo de inversión Colectiva, </span>
+                <span class="text-description bold">la acción para potenciar tu capital y hacer real tu objetivo!</span>
+                <span class="text-description-more" (click)="showDescription()">Conoce más</span>
+                <div *ngIf="showMore">
+                    <div class="content-description-with-img">
+                        <img src="../../../../assets/img/info-product/world.png" height="16px" width="16px" alt="world"/>
+                        <span class="text-with-img">Rentabilidades mínimas del <span class="text-with-img bold">3% anuales</span></span>
+                    </div>
+                    <div class="content-description-with-img" style="margin-bottom: 10px;">
+                        <img src="../../../../assets/img/info-product/profile.png" height="16px" width="16px" alt="world"/>
+                        <span class="text-with-img"><span class="text-with-img bold">4.000 clientes</span> confían en este producto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-btn-card-slide">
+            <div class="btn-card-slide selected"></div>
+            <div class="btn-card-slide"></div>
+            <div class="btn-card-slide"></div>
+        </div>
+    </div>
+    
+    <button class="btn-right"
+    [style]="'background: url(\'../../../assets/img/info-product/circle-green.svg\')'"></button>
+</div>
