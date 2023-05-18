@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/angular,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=angular,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/angular,visualstudiocode,sonar,sonarqube
+# Edit at https://www.toptal.com/developers/gitignore?templates=angular,visualstudiocode,sonar,sonarqube
 
 ### Angular ###
 ## Angular ##
@@ -33,6 +33,23 @@ e2e/*.map
 # System Files
 .DS_Store/
 
+### Sonar ###
+#Sonar generated dir
+/.sonar/
+
+### SonarQube ###
+# SonarQube ignore files.
+#
+# https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
+# Sonar Scanner working directories
+.sonar/
+.sonarqube/
+.scannerwork/
+
+# http://www.sonarlint.org/commandline/
+# SonarLint working directories, configuration files (including credentials)
+.sonarlint/
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -52,4 +69,4 @@ e2e/*.map
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/angular,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/angular,visualstudiocode,sonar,sonarqube
